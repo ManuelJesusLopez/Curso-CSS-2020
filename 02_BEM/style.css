@@ -1,0 +1,61 @@
+/*
+
+METODOLOGÍA BEM (Bloque Elemento Modificador
+
+Bloques se denominan con una sola palabra o con dos palabras separadas por un guion si puede existir conflicto de estilos.
+    .menu / .main-menu
+    .gallery / .main-gallery
+
+Elementos se nombran con el nombre del bloque al que pertenecen y su nombre con dos guiones bajos
+    .menu__item / .main-menu__link
+    .gallery__img / .main-gallery__item
+
+Modificadores se nombran con el nombre del bloque al que pertenecen y su modificador con dos guiones medios
+    .menu__item--active
+    .gallery__item--special
+
+*/
+
+.main-title {
+    text-align: center;
+}
+
+.header {
+    background-color: lightblue;
+    height: 50px;
+}
+
+.main-menu {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main-menu__item {
+    line-height: 3;
+}
+
+.main-menu__link {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: green;
+}
+
+.main-menu__link--active {
+    background-color: red;
+}
+
+
+
+.main {
+    background-color: lightseagreen;
+    height: 600px;
+}
+
+.footer {
+    background-color: lightsalmon;
+    height: 200px;
+}
