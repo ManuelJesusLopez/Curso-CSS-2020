@@ -1,0 +1,76 @@
+/* 
+-----------------------
+Selectores de atributo 
+-----------------------
+*/
+
+
+ /* Selecciona los elementos con ese atributo */
+[href] {                    
+    color: green;
+}
+
+ /* Selecciona los elementos con ese atributo y ese valor */
+[href="#"] {
+    color: red;
+}
+
+/* Selecciona los elementos que ese atributo y ese valor al menos una vez */
+[class~="verde"] {
+    color: green;
+}
+
+/* Selecciona los elementos que ese atributo tenga exactamente ese valor o empiece por el valor seguido de un guión */
+[class|="verde"] {
+    color: green;
+}
+
+/* Selecciona los elementos que tienen ese atributo y empiezan por ese valor */
+[class^="verde"] {
+    color: green;
+}
+
+/* Selecciona los elementos que tienen ese atributo y terminan por ese valor */
+[class$="verde"] {
+    color: green;
+}
+
+/* Selecciona los elementos que tienen ese atributo y contengan ese valor */
+[class*="verde"] {
+    color: green;
+}
+
+/* 
+--------------------------
+Selectores Combinadores
+--------------------------
+*/
+
+/* Selector de hermano adyacente , selecciona inmediatamente el que este debajo */
+h1 + h2 {
+    color:red;
+}
+
+h2 + h2 {
+    color:blue;
+}
+
+/* Selector de hermano general, selecciona a todos los que hay por debajo de él */
+h1 ~ h3 {
+    color: chocolate;
+}
+
+/* Selector descendente */
+div span {
+    color: cyan;
+}
+
+/* Selector de hijo directo, no funciona porque el span no es hijo del div. Es hijo del <p> */
+div > span {
+    color: blue;
+}
+
+p > span {
+    color: blue;
+}
+
