@@ -1,0 +1,49 @@
+/*
+
+Elementos en línea: 
+- Solo ocupa su contenido.
+- No se puede modificar ni su ancho ni su alto.
+
+Elementos de bloque:
+- Ocupan todo el ancho disponible del viewport.
+- Se les puede asignar ancho y alto ( ancho = viewport y alto = contenido)
+
+*/
+
+h1 {
+    background-color: lightblue;
+    height: 150px;
+    width: 100px;
+}
+
+h2 {
+    background-color: purple;
+    width: 50px;
+}
+
+a {
+    background-color: lime;
+    /* 
+    width: 300px;     No sucede nada porque son elementos en línea
+    height: 300px; 
+    */
+}
+
+.box-1 {
+    width: 100px;
+    height: 100px;
+    background-color: lime;
+    padding: 10px;
+    border: 2px solid palevioletred;
+    margin: 20px;
+    outline: 5px solid blue; /* No afecta al tamaño de la caja */
+}
+
+.box-2 {
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    border: 10px solid;
+    border-left: 25px dotted;
+    border-color: blue red green lavender;
+}
