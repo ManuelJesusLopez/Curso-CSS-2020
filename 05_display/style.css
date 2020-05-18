@@ -1,0 +1,41 @@
+/*
+
+-> inline
+- Un elemento de bloque se comporta como un elemento en línea.
+- Margin y padding no afecta al flujo vertical, sólo al horizontal.
+
+-> Block
+- Un elemento de línea se comporta como un elemento en bloque.
+
+-> inline-block
+- Se comporta como un elemento en línea pero que acepta width y height.
+
+-> none
+- Oculta el elemento pero se sigue renderizando.
+
+-> table
+- Imita el comportamiento de una tabla. "No se usa"
+
+-> list-item
+- Imita el comportamiento de una lista. "No se usa"
+
+
+
+-> flex
+- Maquetar componentes
+
+-> grid
+- Maquetar layout
+
+*/
+
+.inline {
+    background-color: darkturquoise;
+    display: inline-block;
+    height: 200px;
+    margin-bottom: 2em;
+}
+
+.block {
+    background-color: darksalmon;
+}

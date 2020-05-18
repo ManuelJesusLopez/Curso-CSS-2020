@@ -35,6 +35,13 @@ Valores de position
 - Su punto de referencia no se modificará aunque movamos el elemento.
 - Cuando hacemos scroll el elemento se moverá hasta alcanzar el tope establecido.
 
+-> Z-index - complementario al position en el eje z
+- Modifica el orden de las capas en el eje z
+- Admite valores positivos y negativos.
+- Es recomendable usar valores no consecutivos. Es recomendado en intervalos[(10, 20, 30 ...) (100, 200, 300..)]
+- Si el padre tiene z-index declarado no podremos poner a un hijo por encima.
+
+
 */
 
 
@@ -146,4 +153,49 @@ body {
 
     top: 2em;
     width: 100%;
+}
+
+.caja {
+    width: 75px;
+    height: 75px;
+    font-size: 1.5em;
+    line-height: 75px;
+    text-align: center;
+    position: relative;
+}
+
+.caja1 {
+    background-color: darkcyan;
+    z-index: 30;
+}
+.caja2 {
+    background-color: darkkhaki;
+    top: -38px;
+    left: 38px;
+    z-index: 20;
+}
+.caja3 {
+    background-color: darkorchid;
+    top: -75px;
+    left: 75px;
+    z-index: 10;
+}
+
+.padre {
+    width: 200px;
+    height: 200px;
+    background-color: darkslategrey;
+    position: relative;
+    top: 30px;
+    /* No tiene que tener un z-index declarado */
+}
+
+.hijo {
+    width: 50px;
+    height: 50px;
+    background-color: darkturquoise;
+    position: relative;
+    top: -30px;
+    left: 150px;
+    z-index: -1; /* Tiene que tener un z-index declarado en negativo */
 }
