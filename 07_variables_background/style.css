@@ -1,0 +1,119 @@
+:root {
+    --color: red;
+    --border: 10px solid teal;
+    --border2: 10px solid lime;
+}
+
+
+.paragraph {
+    color: var(--color);
+}
+
+.article {
+    --color: green;
+}
+
+.check:checked + .box {
+    --color: purple;
+    border: var(--border2);
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: var(--color);
+    border: var(--border);
+}
+
+/*
+
+-> BACKGROUND
+- background-color:         Establece color de fondo
+- background-image:         Establece una imagen de fondo
+- background-repeat:        Establece si un fondo se repite o no
+- background-position:      Establece la posicion del background
+- background-size:          Establece el tamaño del background
+- background-origi:n        Establece desde donde se empezará a dibujar el fondo
+- background-clip:          Establece en que parte de la caja se dibujará el fondo
+- background-attachment:    Establece si el background es relativo a la caja o al viewport
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding-bottom: 50em;
+    text-align: center;
+}
+
+.flex-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+
+[class^="bg-"] {
+    height: 150px;
+    border: 2px solid red;
+}
+
+.bg-color {
+    flex: auto;
+    background-color: teal;
+}
+
+.bg-image {
+    background-image: url(./two-yellow-labrador-retriever-puppies-1108099.jpg);
+}
+.bg-size {
+    background-image: url(./two-yellow-labrador-retriever-puppies-1108099.jpg);
+    background-size: cover;
+}
+
+.bg-repeat {
+    background-image: url(./logo.png);
+    background-size: 20%;
+    background-repeat: no-repeat;
+}
+
+.bg-position {
+    background-image: url(./logo.png);
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.bg-origin {
+    border: 10px dotted red;
+    padding: 10px;
+    background-image: url(./white-ceramic-mug-with-coffee-4281783.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+
+.bg-clip {
+    border: 10px dotted red;
+    background-color: blue;
+    padding: 15px;
+    background-clip: content-box;
+}
+
+.bg-multiple {
+    background-image: 
+        url(./logo.png),
+        url(./white-ceramic-mug-with-coffee-4281783.jpg);
+    background-size: 40%, cover;
+    background-repeat: no-repeat;
+    
+}
+
+.bg-attachment {
+    background-image: url(./white-ceramic-mug-with-coffee-4281783.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}

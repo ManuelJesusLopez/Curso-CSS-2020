@@ -1,0 +1,277 @@
+/*
+-> pseudoelementos
+Se utilizan para dar estilo a partes específicas de un elemento
+
+::first-line    (Elementos de bloqye)
+::first-letter  (Elementos de bloque)
+::selection     (Retirado de la especificación)
+
+
+::before
+::after
+- La propiedad content es obligatoria.
+- Son elementos de línea por defecto.
+- Son hijos del elemento al que pertenecen.
+
+-> pseudoclases
+Son selectores que reaccionan en tiempo real detectando la interacción del usuario con algunos elementos.
+
+-> Dynamic
+:link       - Link no visitado
+:visited    - Link visitado
+:hover      - Pasar el ratón por el elemento
+:active     - El momento del click
+:focus      - Cuando el elemento tiene el foco
+
+-> Target
+:target     - Elemento es el objetivo de un marcador o ancla
+
+-> Language
+:lang()     - Elemento que contiene el atributo lang que especifiquemos
+
+-> UI States
+:enabled
+:disabled
+:checked
+:in-range
+:out-of-range
+:required
+:optional
+:valid
+:invalid
+
+-> Structural
+
+:root
+- Afecta a la raíz
+
+:nth-child()
+- Selecciona al hijo nº
+
+:nth-last-child()
+- Selecciona al hijo nº empezando a contar desde el ulyimo
+
+:nth-of-type()
+
+:nth-last-of-type()
+
+:first-child
+- Selecciona al primer hijo.
+
+:last-child
+- Selecciona al último hijo.
+
+:first-of-type
+
+:last-of-type
+
+:only-child
+- Selecciona al hijo único.
+
+:only-of-type
+
+:empty
+- Afecta a elementos vacíos
+
+-> Negation
+:not()
+
+*/
+
+
+
+/* ----------------------- Pseudoelementos ---------------------------- */
+
+.title::first-letter {
+    color: red;
+    font-size: 2em;
+}
+
+.text::first-line {
+    color: royalblue;
+}
+
+.text::selection {
+    color: lime;
+    background-color: red;
+}
+
+.dolar::before {
+    content: '$';
+}
+
+.dolar::after {
+    content: '.00';
+}
+
+.box::before,
+.box::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: olivedrab;
+}
+
+
+.inline {
+    display: block;
+}
+
+.inline::first-letter {
+    color: red;
+    font-size: 2em;
+}
+
+/* ----------------------- Pseudoclases ---------------------------- */
+
+.link:link {
+    color: red;
+}
+
+.link:visited {
+    color: coral;
+}
+
+.link:active {
+    background-color: crimson;
+}
+
+/* Ejemplo de :active*/
+
+.button {
+    text-decoration: none;
+    display: inline-block;
+    background-color: crimson;
+    color: white;
+    padding: .5em;
+    border-radius: 10px;
+}
+
+.button:active { 
+    transform: scale(.9);
+}
+
+.button:hover {
+    background-color: teal;
+}
+
+.input {
+    margin-top: 10px;
+    display: block;
+}
+
+.input:focus {
+    border: 2px solid teal;
+}
+
+.menu {
+    background-color: lightblue;
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.parrafo {
+    margin-top: 500px;
+    margin-bottom: 1500px;
+}
+
+.parrafo:target {
+    padding-top: 60px;
+}
+
+.span {
+    display: block;
+}
+
+.span:lang(en) {
+    color: red;
+}
+
+.span:lang(es) {
+    color: lightslategray;
+}
+
+/*        ---------------------------------              */
+
+.input:enabled {
+    background-color: red;
+}
+
+.input:disabled {
+    background-color: mediumaquamarine;
+    border: none;
+}
+
+.input:checked + .label {
+    font-size: 2em;
+}
+
+.input:in-range {
+    background-color: limegreen;
+}
+
+.input:out-of-range {
+    background-color: darkseagreen;
+}
+
+.input:optional {
+    background-color: darkturquoise;
+}
+
+.input:required {
+    background-color: dimgrey;
+}
+
+.input:valid {
+    background-color: gold;
+}
+
+.input:invalid {
+    background-color: red;
+}
+
+.paragraph {
+    padding: .5em;
+    background-color: turquoise;
+}
+
+.paragraph:empty {
+    all: unset; /* Resetea el elemento */
+}
+
+.paragraph:first-child {
+    background-color: tomato;
+}
+
+.paragraph:last-child {
+    background-color: violet;
+}
+
+/* .paragraph:nth-child(odd) {
+    background-color: yellowgreen;
+} */
+
+/* .paragraph:nth-child(even) {
+    background-color: yellowgreen;
+} */
+
+.paragraph:nth-child(2) {
+    background-color: goldenrod;
+}
+
+.paragraph:nth-child(2n) { /* De dos en dos sin contar el primero */
+    background-color: goldenrod;
+}
+
+.paragraph:nth-child(3n+1) { /* De tres en tres empezando desde el 1 */
+    background-color: yellowgreen;
+}
+
+.paragraph:nth-child(n+4) { /* Del seleccionado en adelante */
+    background-color: red;
+}
