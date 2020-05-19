@@ -66,3 +66,21 @@ Elemento de línea
     /* filter: saturate(0); */
     filter: sepia(1);
 }
+
+.box {
+    width: 400px;
+    height: 400px;
+    background-color: teal;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box__item {
+    width: 400px;
+    height: 400px;
+    background-color: tomato;
+    /* clip-path: circle(100px); */
+    /* clip-path: ellipse(100% 150px at top); */
+    /* clip-path: inset(20px 50px round 20px) */
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}

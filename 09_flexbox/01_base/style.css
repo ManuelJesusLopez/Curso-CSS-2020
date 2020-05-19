@@ -1,0 +1,85 @@
+/*
+                Cross start
+                    |
+                    |
+    main start------|-------main end ------> Main axis
+                    |
+                    |
+                cross end
+                    |
+                    |
+                    v 
+                Cross axis
+
+-> Flexbox - Para el contenedor
+    display:flex;
+    - Convierte el contenedor en un contexto para flexbox y hace que el contenedor sea un elemento de bloque para los elementos que lo rodean.
+
+    display:inline-flex;
+    - Convierte el contenedor en un contexto para flexbox y hace que el contenedor sea un elemento en línea para los elementos que lo rodean.
+
+    flex-direction: row(default) | row-reverse | column | column-reverse
+    - Modifica la dirección y cual es el eje principal.
+
+    flex-wrap: no-wrap(default) | wrap | wrap-reverse
+    - Controla si los elementos saltarán de línea o no.
+
+    Alineamiento: 
+    - Main axis
+        justify-content: flex-start(default) | center | space-between | space-around | space-evenly | flex-end
+
+    - Cross axis
+        align-items: flex-start | center | flex-end | stretch(default) | baseline   --  Para una sola línea
+        align-content: flex-start | center | flex-end | stretch(default) | baseline   --  Para varias líneas
+        
+        align-self: se aplica al flex-item. sirve para alinear un elemento en concreto en el cross-axis
+
+    
+    TRUCO EXTRA:
+
+
+
+-> Flexbox para el elemento
+
+
+
+*/
+
+.flex-container {
+    height: 600px;
+    background-color: tomato;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.flex-item {
+    width: 50px;
+    height: 50px;
+    margin: .5em;
+    line-height: 50px;
+    color: azure;
+    text-align: center;
+    background-color: darkviolet;
+}
+
+.flex-item:nth-child(2) {
+    align-self: center;
+}
+
+.flex-container2 {
+    height: 400px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-item2 {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: grey;
+    text-align: center;
+    background-color: turquoise;
+    margin: auto; /* Centrado absoluto */
+}
