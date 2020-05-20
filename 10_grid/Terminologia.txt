@@ -60,8 +60,8 @@
 - grid-row-end      :   Establece hasta que row-line llega el elemento.
 
 + Existe un shorthand que engloba las 2 propiedades.
-- grid-column: start | end;
-- grid-row: start | end;
+- grid-column: start / end;
+- grid-row: start / end;
 
 + Tanto start como end admiten valores positivos, negativos y la palabra span.
 - Valor positivo    : Empieza a contar las column-lines o las row-lines de izquierda a derecha.
