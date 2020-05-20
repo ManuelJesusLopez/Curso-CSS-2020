@@ -1,0 +1,74 @@
+-> Fundamentos
+
++ Es un modelo de layout que permite construir grillas o cuadriculas dinámicas. 
++ Es un valor de la propiedad display.
++ Se necesita un contenedor (.grid-container) y al menos un hijo (.grid-item).
++ Las celdas son los items, el contenedor es el contexto al que pertenecen los items.
+
+    +-----------+-----------+-----------+-----------+ -------------> .grid-container
+    |           |           |           |           |
+    |     A     |     B     |     C     |     D     | -------------> .grid-items
+    |           |           |           |           |
+    +-----------+-----------+-----------+-----------+   
+    |           |           |           |           |
+    |     E     |     F     |     G     |     H     | -------------> .grid-items
+    |           |           |           |           |
+    +-----------+-----------+-----------+-----------+   
+    |           |           |           |           |
+    |     I     |     J     |     K     |     L     | -------------> .grid-items
+    |           |           |           |           |
+    +-----------+-----------+-----------+-----------+   
+
+- Grid column   :   Es cada columna de nuestra cuadrícula.
+- Grid grow     :   ES cada fila de nuestra cuadrícula.
+- Grid cell     :   Es cada celda de nuestra cuadrícula.
+- Column gap    :   Es la separación de las celdas entre columnas.
+- Row gap       :   Es la separación de las celdas entre filas.
+- Grid line     :   Existen column lines y row lines, son las líneas que delimitan cada columna/fila respectivamente.
+
+
+            Column line     Column line     Column line     Column line
+                |               |               |               |
+
+ Row line --    +---------------+---------------+---------------+ 
+                |               |               |               |
+                |   Grid cell   |   Grid cell   |   Grid cell   | 
+                |               |               |               |
+ Row line --    +---------------+---------------+---------------+   
+                |               |               |               |
+                |   Grid cell   |   Grid cell   |   Grid cell   | 
+                |               |               |               |
+ Row line --    +---------------+---------------+---------------+   
+                |               |               |               |
+                |   Grid cell   |   Grid cell   |   Grid cell   | 
+                |               |               |               |
+ Row line --    +---------------+---------------+---------------+   
+
+
+- En grid cada celda es dinámica y el resto de la cuadrícula se adapta.
+- Podemos decir donde empieza cada celda y donce acaba, tanto en columna como en fila.
+- Sus posibilidades son inmensas.
+- Soporte total. (can I use)
+
+*****************************************************************************************************************************
+
+-> Ordenar elementos con grid-column y grid-row
+
+- grid-column-start :   Establece desde que column-line empezará el elemento.
+- grid-column-end   :   Establece hasta que column-line llega el elemento.
+- grid-row-start    :   Establece desde que row-line empezará el elemento.
+- grid-row-end      :   Establece hasta que row-line llega el elemento.
+
++ Existe un shorthand que engloba las 2 propiedades.
+- grid-column: start | end;
+- grid-row: start | end;
+
++ Tanto start como end admiten valores positivos, negativos y la palabra span.
+- Valor positivo    : Empieza a contar las column-lines o las row-lines de izquierda a derecha.
+- Valor negativo    : Empieza a contar las column-lines o las row-lines de derecha a izquierda.
+- Span              : Establecemos cuantas columnas ha de ocupar, span 3 es como decirle que ocupe 3 columnas.
+
+-> Tip: si ponemos en el valor end -1 llegará hasta el final.
+
+
+

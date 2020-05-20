@@ -1,0 +1,42 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: radial-gradient(circle, #b94bf8, #3a1957);
+    background-repeat: no-repeat;
+    margin: 0;
+    color: #eeeeee;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px;
+}
+
+.grid-items {
+    border: 1px solid #eeeeee;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-items:nth-child(1),
+.grid-items:nth-child(3) {
+    background-color: orange;
+}
+
+.grid-items:nth-child(2),
+.grid-items:nth-child(5) {
+    background-color: violet;
+}
