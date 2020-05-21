@@ -40,5 +40,10 @@ Se basaba en 3 conceptos fundamentales:
 - Desktop-first: Consiste en hacer primero el diseño de escritorio e ir bajando de tamaño.
 - Content-first: Consiste en saber primero todo el contenido de la web y después se hace el diseño.
 
+-----------------------------------------------------------------------------------------------------------------------
+
+-> Vídeos responsive:
+- La forma más común es hacer un padding-bottom de 56.25%, éste número es el resultado de la operación (9 / 16) es decir un formato 16:9. Esto da como resultado 0.5625 y si lo multiplicamos por 100 (el 100% de la ventana), el resultado es 56.25.
+
 
 
