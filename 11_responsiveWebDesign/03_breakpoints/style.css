@@ -1,0 +1,18 @@
+body {
+    background-color: royalblue;
+}
+
+.menu {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+/* - min-width: 480px -> se aplica a todo lo que este a más de 480px*/
+
+@media screen and (min-width: 480px) {
+    body {
+        background-color: teal;
+    }
+}

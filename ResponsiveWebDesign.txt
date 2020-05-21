@@ -45,5 +45,24 @@ Se basaba en 3 conceptos fundamentales:
 -> Vídeos responsive:
 - La forma más común es hacer un padding-bottom de 56.25%, éste número es el resultado de la operación (9 / 16) es decir un formato 16:9. Esto da como resultado 0.5625 y si lo multiplicamos por 100 (el 100% de la ventana), el resultado es 56.25.
 
+-----------------------------------------------------------------------------------------------------------------------
 
+-> Breakpoints (puntos de rotura)
+- Hay de dos tipos:
+    - Mayor breakpoints: Son los que cambian la apariencia de la web de forma significatíva.
+    -Minor breakpoints: Son los que cambian una cosa específica para un elemento en concreto.
+
+- Medidas más comunes:
+
+    + 0 - 320px - 360px: 
+    - Móviles portrait
+
+    + 480px - 640px - 768px: 
+    - Móviles landscape y tablets
+    
+    + 1024 - 1200px - 1400px - 1440px: 
+    - Tablets grandes, portátiles no HD
+
+    + 1920px - en adelante: 
+    - HD, 2k, 4k...
 
