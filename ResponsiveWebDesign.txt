@@ -1,0 +1,44 @@
+***************************************************
+************** Responsive Web Design ************** 
+***************************************************
+
+Se basaba en 3 conceptos fundamentales:
+    - Columnas fluidas.
+    - Imágenes flexibles: maz-width: 100%;
+    - Media Querys
+    - A día de hoy el número de retos ha crecido notablemente y se hace "imprescindible" el uso de JavaScript.
+
+-> Columnas fluidas:
+- Para conseguir un sistema de columnas o de cajas fluidas es tan sencillo como aplicar los anchos en porcentaje.
+- NO hay que asignar todos los anchos en porcentaje, solo se aplica a los elementos que necesiten cambiar su tamaño.
+
+
+-> Media Queris:
+- Son condicionales para que el navegador sepa cómo actuar en función de la condición.
+    + all: Apto para todos los dispositivos.
+    + print: Destinado a material impreso y visualización del modo de vista previa de impresión.
+    + screen: Destinado principalmente a las pantallas.
+    + speech: Destinado a sintetizadores de voz.
+
+-> Sintaxis:
+    @media "tipo de medio" and|or (condicion) {}
+
+- Las condiciones más utilizadas son min-width, max-width y orientation.
+
+    + @media screen and (min-width: 360px) 
+    - Para un medio pantalla con un ancho mínimo de 360px
+
+    + @media screen and (min-width: 1024px) and (orientation: landscape)
+    - Para un medio de pantalla con un ancho máximo de 1024px y con la pantalla en orientación en landscape (landscape: es que sea más ancho que alto. Aunque sea por 1px).
+
+    + @media screen and (min-width: 480px) or (orientation: portrait)
+    - Para un medio de pantalla con un ancho máximo de 480px o con la pantalla en orientación en portrait (portrait: más alto que ancho)
+
+-> Metodologías:
+
+- Mobile-first: Consiste en hacer primero el diseño móvil e ir subiendo de tamaño.
+- Desktop-first: Consiste en hacer primero el diseño de escritorio e ir bajando de tamaño.
+- Content-first: Consiste en saber primero todo el contenido de la web y después se hace el diseño.
+
+
+
