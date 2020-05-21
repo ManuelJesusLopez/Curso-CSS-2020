@@ -1,0 +1,71 @@
+/*
+
+- banner con unidades de viewport
+- footer siempre abajo
+- responsive con flexbox
+- responsive con grid
+
+*/
+
+* {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    color: wheat;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: teal;
+    background-repeat: no-repeat;
+
+    /* Colocar el footer al final de la página */
+    min-height: 100vh;
+    
+    /* --- Flexbox --- */
+    display: flex;
+    flex-direction: column; 
+   
+
+    /* ---- Grid ---- */
+    /* display: grid; */
+}
+
+.banner {
+    background-color: royalblue;
+    padding: 10vmin; 
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+/* ---------------------- Utilizando FLEXBOX --------------------
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexbox__item {
+    margin: 2rem;
+    min-width: 320px;
+
+    flex: 1 1 320px; /*320: es el movil más pequeño 
+} 
+*/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+
+.footer {
+    background-color: tomato;
+    padding: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+
+    /* Colocar el footer al final de la página */
+    margin-top: auto;
+
+}
