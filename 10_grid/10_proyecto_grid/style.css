@@ -1,0 +1,61 @@
+body {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    margin: 0;
+    color: #eeeeee;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: radial-gradient(circle, #b94bf8, #3a1957);
+    background-repeat: no-repeat;
+}
+
+.grid-item {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    align-items: center;
+}
+
+.header {
+    grid-column: 1 / -1;
+}
+
+.aside {
+    grid-column: span 1;
+    grid-row: 2 / -1;
+    background-color: teal;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 5px;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que las fotos no se deformen, pero puede no caber en el grid item y ocultarse parte de la imagen*/
+    grid-auto-flow: dense; /* Para calcular que no haya huecos en el grid*/
+}
+
+.gallery img:nth-child(3) {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 2;
+}
+
+.gallery img:nth-child(6) {
+    grid-row: span 2;
+}
+
+.gallery img:nth-child(11) {
+    grid-column: span 2;
+}
+
+.footer {
+    background-color: tomato;
+}

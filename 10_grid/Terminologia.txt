@@ -116,7 +116,55 @@ Si como segundo valor añadimos más de una medida, construiremos un patrón, no
     - max-content: máximo necesario en función del contenido.
 
 auto-fill: Crea tantos grid-items vacios como quepan en el viewport respetando las medidas.
+
 auto-fit: Elimina los grid-items vacios que no estén ocupando.
+
+*****************************************************************************************************************************
+
+-> Alineamiento:
+
+- justify-items: Alinea los elementos horizontalmente respecto a la celda.
+
+- align-items: Alinea los elementos verticalmente respecto a la celda.
+    Admiten los valores:
+        start
+        end
+        center
+        stretch(default)
+
+- place-items: Engloba las propiedades justify-items y align-items.
+    place-items: align-items  justify-items
+
+- justify-content: Alinea los elementos horizontalmente respecto al contenedor.
+
+- align-content: Alinea los elementos verticalmente respecto al contenedor.
+    Admiten los valores:
+        start
+        end
+        center
+        stretch(default)
+        space-around
+        space-between
+        space-evenly
+
+- place-content: Engloba las propiedades justify-content y align-content.
+    place-content: align-content  justify-content
+
+
+- Tenemos las mismas propiedades con self para los items;
+    justify-selfa
+    align-self
+    place-self
+
+    Admite los valores:
+        start
+        end
+        center
+        stretch
+
+- order: Funciona igual que con flexbox, por defecto todos los items tienen order: 0;
+
+
 
 
 
